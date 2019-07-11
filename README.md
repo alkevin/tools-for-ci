@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 [![npm](https://img.shields.io/npm/v/@angular/cli.svg?color=%234b1&label=npm%20package&logo=npm&style=plastic)](https://badge.fury.io/js/%40angular%2Fcli)
 ![David](https://img.shields.io/david/WingsHell/tools-for-ci.svg?color=%234b1&style=plastic)
 ---------
-[![Codacy grade](https://img.shields.io/codacy/grade/c39efc40abd0469f856a4efcfc4efe95.svg?color=%234c1&label=Codacy%20Grade&logo=codacy&style=plastic)](https://www.codacy.com/app/WingsHell/tools-for-ci?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=WingsHell/tools-for-ci&amp;utm_campaign=Badge_Grade)
+[![Codacy grade](https://img.shields.io/codacy/grade/c39efc40abd0469f856a4efcfc4efe95.svg?color=%234b1&label=Codacy%20Grade&logo=codacy&style=plastic)](https://www.codacy.com/app/WingsHell/tools-for-ci?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=WingsHell/tools-for-ci&amp;utm_campaign=Badge_Grade)
 [![Coveralls github](https://img.shields.io/coveralls/github/WingsHell/tools-for-ci.svg?color=%234b1&label=Coveralls&style=plastic)](https://coveralls.io/github/WingsHell/tools-for-ci?branch=master)
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/WingsHell/tools-for-ci.svg?color=%2345D298&logo=code%20climate&style=plastic)](https://codeclimate.com/github/WingsHell/tools-for-ci/maintainability)
 ---------
