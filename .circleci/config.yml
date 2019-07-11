@@ -1,0 +1,47 @@
+version: 2
+jobs:
+  # The build job
+  build:
+    working_directory: ~/tools-for-ci
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      # Checkout the code from the branch into the working_directory
+      - checkout
+      # Log the current branch
+      - run:
+          name: Show current branch
+          command: echo ${CIRCLE_BRANCH}
+      # Restore local dependencies from cache
+      - restore_cache:
+          key: tools-for-ci-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      # Install project dependencies
+      - run: npm install
+      # Cache local dependencies if they don't exist
+      - save_cache:
+          key: tools-for-ci-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - "node_modules"
+      # Lint the source code
+      - run:
+          name: Linting
+          command: npm run lint
+      # Test the source code
+      - run:
+          name: Testing
+          command: npm run test -- --no-watch --code-coverage --no-progress --browsers=ChromeHeadlessCI
+      # Test the source code
+      - run:
+          name: e2e
+          command: npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
+      # Build project withconfiguration based on current branch
+      - run:
+          name: Building
+          command: npm run build -- --prod
+
+workflows:
+    version: 2
+    # The build workflow
+    test_and_build:
+        jobs:
+            - build
